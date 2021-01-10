@@ -1,0 +1,228 @@
+/*Opste*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;  
+}
+body {
+    color: #555;
+    
+    font-size: 16px;
+    position: relative;
+    min-height: 100vh;
+    font-weight: 400;
+}
+.right { float: right;}
+
+/* Gornji deo */
+.top {
+    height: 40vh;
+    background-image: linear-gradient(120deg, #305d68, #7acce0);
+    position: relative;
+}
+.budzet {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+.budzet-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.budzet-value {
+    text-align: center;
+    font-weight: 300;
+    font-size: 46px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+.budzet-prihod, .budzet-rashod{
+    padding: 12px;
+    text-transform: uppercase;
+}
+.budzet-prihod{
+    margin-bottom: 10px;
+    background-color: #28b9b5;
+}
+.budzet-rashod{
+    background-color: #ff5049;
+}
+.budzet-prihod-text,.budzet-rashod-text{
+    float: left;
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px;
+}
+.budzet-prihod-value,.budzet-rashod-value{
+    float: left;
+    letter-spacing: 1px;
+}
+.budzet-rashod-procenat{
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #ffffff33;
+}
+.btn-reset{
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-reset:active { transform: translateY(2px);}
+.btn-reset:focus {outline: none; }
+
+/*Donji deo*/
+/*Forma*/
+
+.add {
+    padding: 15px;
+    border-bottom: 1px solid #dbd2d2;
+    background-color: #f7f7f7;
+}
+.add-container {
+    margin: 0 auto;
+    text-align: center;
+}
+.add-type {
+    width: 55px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.5s;
+}
+.add-description,.add-value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+.add-description{ width: 400px;}
+.add-value { width: 100px;}
+
+.add-btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #ff5049;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.add-btn:active { transform: translateY(2px);}
+.add-type:focus,.add-description:focus,.add-value:focus{
+    outline: none;
+    border: 1px solid #28b9b5;
+}
+.add-btn:focus {outline: none; }
+
+/*Liste*/
+
+.container {
+    width: 900px;
+    margin: 60px auto;
+}
+.prihod {
+    float: left;
+    margin-right: 50px;
+    width: 375px;
+}
+.rashod {
+    float: left;
+    width: 375px;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.prihod-title { color: #28b9b5;}
+.rashod-title { color: #ff5049;}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+/*odavde ono sto dodajemo*/
+
+.item-description {
+    float: left;
+}
+
+.item-value {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item-percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.prihod .item-value,
+.prihod .item-delete-btn {
+    color: #28B9B5;
+}
+
+.rashod .item-value,
+.rashod .item-percentage,
+.rashod .item-delete-btn {
+    color: #FF5049;
+}
+.item-delete {
+    float: left;
+}
+
+.item-delete-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    display: none;
+}
+
+.item-delete-btn:focus { outline: none; }
+.item-delete-btn:active { transform: translateY(2px); }
+
+.item:hover .item-delete-btn { display: block; }
+.item:hover .item-value { transform: translateX(-20px); }
+.item:hover .item-percentage { transform: translateX(-20px); }

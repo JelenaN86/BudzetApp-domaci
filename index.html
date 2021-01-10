@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <title>Pracenje Budzeta App</title>
+</head>
+<body>
+    <section class="top">
+        <div class="budzet">
+            <h1 class="budzet-title">Dostupan budzet :</h1>
+            <div class="budzet-value"></div>
+            <div class="budzet-prihod clearfix">
+                <div class="budzet-prihod-text">Prihod</div>
+                <div class="right">
+                    <div class="budzet-prihod-value"></div>
+                </div>
+            </div>
+            <div class="budzet-rashod clearfix">
+                <div class="budzet-rashod-text">Rashod</div>
+                <div class="right clearfix">
+                    <div class="budzet-rashod-value"></div>
+                    <div class="budzet-rashod-procenat"></div>
+                </div>
+            </div>
+            <button class="btn-reset">Resetuj budzet</button>
+        </div>
+    </section>
+
+    <section class="bottom">
+        <div class="add">
+            <form class="add-container">
+                <select class="add-type">
+                    <option value="pri">+</option>
+                    <option value="ras">-</option>
+                </select>
+                <input type="text" class="add-description" placeholder="Opis">
+                <input type="number" class="add-value" placeholder="Iznos">
+                <button class="add-btn" type="submit"><i class="ion-ios-checkmark-outline"></i></button>
+            </form>
+        </div>
+        <div class="container clearfix">
+            <div class="prihod">
+                <h2 class="prihod-title">PRIHODI</h2>
+                <div class="lista-prihodi">
+                  <!--<div class="item clearfix">
+                        <div class="item-description">Plata</div>
+                        <div class="right clearfix">
+                            <div class="item-value">120000</div>
+                            <div class="item-delete">
+                                <button class="item-delete-btn"><i class="ion-ios-close-outline"></i></button>
+                            </div>
+                        </div>
+                    </div>-->
+                    
+                </div>
+            </div>
+            <div class="rashod">
+                <h2 class="rashod-title">RASHODI</h2>
+                <div class="lista-rashodi">
+             <!-- <div class="item clearfix">
+                        <div class="item-description">Kredit</div>
+                        <div class="right clearfix">
+                            <div class="item-value">13400</div>
+                            <div class="item-percentage"></div>
+                            <div class="item-delete">
+                                <button class="item-delete-btn"><i class="ion-ios-close-outline"></i></button>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <p class="msg"></p>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
